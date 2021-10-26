@@ -1,10 +1,10 @@
 
-
-
 function calculate(){
-    const num1= Number(document.getElementById("num1").value);
+    const num1= +document.getElementById("num1").value;
     const operator = document.getElementById("operator").value;
-    const num2 = Number(document.getElementById("num2").value);
+    const num2 = +document.getElementById("num2").value;
+    const arr = [];
+    console.log(arr)
     let total;
     if(num1 && num2 || (num1===0 || num2===0)){
         switch(operator){
