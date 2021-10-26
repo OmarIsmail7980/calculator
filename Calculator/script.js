@@ -6,7 +6,7 @@ function calculate(){
     const operator = document.getElementById("operator").value;
     const num2 = Number(document.getElementById("num2").value);
     let total;
-    if(num1 && num2){
+    if(num1 && num2 || (num1===0 || num2===0)){
         switch(operator){
             case '+':
                 total=(num1+num2);
@@ -30,10 +30,9 @@ function calculate(){
                 break;
 
         }
-    }else{
-        console.log("enter numbers")
+        document.getElementById("result").textContent=" = "+total;
     }
 
-    document.getElementById("result").textContent=" = "+total;
+    
    
 }
